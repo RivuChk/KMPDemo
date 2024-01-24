@@ -1,3 +1,5 @@
+package dev.rivu.kmpdemo
+
 class Greeting {
     private val platform = getPlatform()
 

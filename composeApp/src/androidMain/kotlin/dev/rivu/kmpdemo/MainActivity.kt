@@ -1,6 +1,5 @@
-package dev.rivu
+package dev.rivu.kmpdemo
 
-import App
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent

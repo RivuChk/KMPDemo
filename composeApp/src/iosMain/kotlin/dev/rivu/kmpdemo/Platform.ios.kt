@@ -1,3 +1,5 @@
+package dev.rivu.kmpdemo
+
 import platform.UIKit.UIDevice
 
 class IOSPlatform: Platform {
