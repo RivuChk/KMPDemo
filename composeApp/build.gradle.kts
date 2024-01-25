@@ -41,7 +41,7 @@ kotlin {
             implementation(compose.ui)
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
-            implementation(project(":sdk"))
+            implementation(project(":data"))
         }
     }
 }

@@ -10,6 +10,7 @@ androidx-core-ktx = "1.12.0"
 androidx-espresso-core = "3.5.1"
 androidx-material = "1.11.0"
 androidx-test-junit = "1.1.5"
+arrowCore = "1.2.0"
 compose = "1.5.4"
 compose-compiler = "1.5.8"
 compose-plugin = "1.6.0-alpha01"
@@ -23,6 +24,7 @@ kotlinInject = '0.6.3'
 ksp = '1.9.21-1.0.16'
 
 [libraries]
+arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrowCore" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }

@@ -20,4 +20,4 @@ dependencyResolutionManagement {
 }
 
 include(":composeApp")
-include(":sdk")
+include(":data")

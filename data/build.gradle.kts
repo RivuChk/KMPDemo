@@ -43,6 +43,7 @@ kotlin {
         commonMain.dependencies {
             implementation(libs.bundles.common.ktor)
             implementation(libs.coroutines.core)
+            implementation(libs.arrow.core)
         }
         jsMain.dependencies {
 
