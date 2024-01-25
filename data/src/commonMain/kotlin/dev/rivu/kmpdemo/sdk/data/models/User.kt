@@ -7,7 +7,8 @@ data class User (
     val email: String,
     val address: Address,
     val company: Company,
-    val userName: String
+    val userName: String,
+    val source: ApiType,
 ) {
     
     data class Address(

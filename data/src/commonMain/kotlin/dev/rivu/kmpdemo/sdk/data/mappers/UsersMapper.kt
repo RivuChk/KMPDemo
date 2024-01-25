@@ -1,5 +1,7 @@
 package dev.rivu.kmpdemo.sdk.data.mappers
 
+import dev.rivu.kmpdemo.sdk.data.models.ApiType.DummyJson
+import dev.rivu.kmpdemo.sdk.data.models.ApiType.JsonPlaceholder
 import dev.rivu.kmpdemo.sdk.data.models.DummyJsonUsersResponse
 import dev.rivu.kmpdemo.sdk.data.models.JsonPlaceholdersUsersResponse
 import dev.rivu.kmpdemo.sdk.data.models.Page
@@ -26,7 +28,8 @@ fun JsonPlaceholdersUsersResponse.mapToUsersList(profilePicsList: List<String>):
             ),
             company = Company(
                 name = responseItem.company.name
-            )
+            ),
+            source = JsonPlaceholder
         )
     }
 }
@@ -53,7 +56,8 @@ fun DummyJsonUsersResponse.mapToUsersPage(): Page<User> {
                 ),
                 company = Company(
                     name = responseItem.company.name
-                )
+                ),
+                source = DummyJson
             )
         }
     )
