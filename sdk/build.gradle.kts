@@ -1,23 +1,19 @@
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.ksp)
 }
 
 
 
-@OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
-    targetHierarchy.default()
-
-    wasmJs {
-        moduleName = "kmpdemoSdk"
+    js(IR) {
+        moduleName = "@rivuchakraborty/kmpdemoSdk"
         browser {
-            commonWebpackConfig {
-                outputFileName = "kmpdemoSdk.js"
-            }
+            binaries.executable()
         }
-        binaries.executable()
     }
 
     androidTarget {
@@ -44,6 +40,9 @@ kotlin {
 
         }
         commonMain.dependencies {
+
+        }
+        jsMain.dependencies {
 
         }
     }
