@@ -1,5 +1,7 @@
 package dev.rivu.kmpdemo.sdk.network
 
+import dev.rivu.kmpdemo.sdk.network.json
+import dev.rivu.kmpdemo.sdk.network.retryConfig
 import dev.rivu.kmpdemo.sdk.isDebug
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.darwin.Darwin

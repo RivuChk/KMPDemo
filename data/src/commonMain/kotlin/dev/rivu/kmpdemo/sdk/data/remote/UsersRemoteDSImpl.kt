@@ -10,7 +10,9 @@ import dev.rivu.kmpdemo.sdk.data.models.JsonPlaceholdersUsersResponseItem
 import dev.rivu.kmpdemo.sdk.data.models.Page
 import dev.rivu.kmpdemo.sdk.data.models.Result
 import dev.rivu.kmpdemo.sdk.data.models.User
+import me.tatarka.inject.annotations.Inject
 
+@Inject
 class UsersRemoteDSImpl(
     private val jsonPlaceholderApi: JsonPlaceholderApi,
     private val dummyJsonApi: DummyJsonApi,

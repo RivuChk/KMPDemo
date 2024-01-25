@@ -1,4 +1,4 @@
-package dev.rivu.kmpdemo.sdk.data
+package dev.rivu.kmpdemo.sdk.data.repository
 
 import dev.rivu.kmpdemo.sdk.data.models.ApiType
 import dev.rivu.kmpdemo.sdk.data.models.User

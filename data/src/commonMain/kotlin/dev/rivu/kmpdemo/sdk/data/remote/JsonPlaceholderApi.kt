@@ -7,15 +7,18 @@ import arrow.core.raise.ensure
 import dev.rivu.kmpdemo.sdk.data.models.JsonPlaceHolderPhotosResponse
 import dev.rivu.kmpdemo.sdk.data.models.Result
 import dev.rivu.kmpdemo.sdk.data.models.JsonPlaceholdersUsersResponse
+import dev.rivu.kmpdemo.sdk.data.remote.di.JsonPlaceHolderBaseUrl
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
 import io.ktor.http.isSuccess
 import io.ktor.utils.io.errors.IOException
+import me.tatarka.inject.annotations.Inject
 
+@Inject
 class JsonPlaceholderApi(
     private val client: HttpClient,
-    private val baseUrl: String
+    private val baseUrl: JsonPlaceHolderBaseUrl
 ) {
     suspend fun getUsers(): Result<JsonPlaceholdersUsersResponse> {
         val result = client.get("$baseUrl/users")
