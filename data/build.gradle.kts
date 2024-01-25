@@ -9,6 +9,8 @@ plugins {
 
 
 kotlin {
+    applyDefaultHierarchyTemplate()
+
     js(IR) {
         moduleName = "@rivuchakraborty/kmpdemoSdk"
         browser {
