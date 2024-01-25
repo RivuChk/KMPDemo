@@ -1,6 +1,6 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Web.
+This is a sample Kotlin Multiplatform project targeting Android and iOS.
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
+* `/composeApp` is for code that is shared across Compose Multiplatform applications.
   It contains several subfolders:
   - `commonMain` is for code that’s common for all targets.
   - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
@@ -9,6 +9,9 @@ This is a Kotlin Multiplatform project targeting Android, iOS, Web.
 
 * `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
   you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+
+* `/data` contains data layer code, including remote, local, and repositories.
+* More details to be added
 
 
 Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html),
