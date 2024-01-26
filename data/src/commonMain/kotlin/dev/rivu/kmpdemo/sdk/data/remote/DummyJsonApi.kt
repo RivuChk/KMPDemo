@@ -21,7 +21,7 @@ class DummyJsonApi(
     private val baseUrl: DummyJsonBaseUrl
 ) {
     suspend fun getUsers(skip: Int, limit: Int = 10): Result<DummyJsonUsersResponse> {
-        val result = client.get("$baseUrl/users")
+        val result = client.get("$baseUrl/users?skip=$skip&limit=$limit")
         return Either.catch {
             val status = result.status
             either {
