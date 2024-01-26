@@ -1,3 +1,5 @@
+![assemble](https://github.com/RivuChk/KMPDemo/actions/workflows/assemble.yml/badge.svg)
+
 This is a sample Kotlin Multiplatform project targeting Android and iOS.
 
 * `/composeApp` is for code that is shared across Compose Multiplatform applications.
