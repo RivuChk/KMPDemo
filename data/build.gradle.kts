@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.kotest.multiplatform)
 }
 
 
@@ -72,6 +73,20 @@ kotlin {
                 kotlin.srcDir("build/generated/ksp/iosSimulatorArm64/iosSimulatorArm64Main/kotlin")
             }
         }
+
+        commonTest.dependencies {
+            implementation(libs.ktor.client.mock)
+            implementation(libs.kotest.assertions.core)
+            implementation(libs.kotest.framework.engine)
+            implementation(libs.kotest.framework.datatest)
+            implementation(kotlin("test-common"))
+            implementation(kotlin("test-annotations-common"))
+        }
+        val androidUnitTest by getting {
+            dependencies {
+                implementation(libs.kotest.runner.junit5)
+            }
+        }
     }
 }
 
@@ -98,3 +113,22 @@ dependencies {
     add("kspAndroid", libs.kotlinInject.compiler)
     add("kspJs", libs.kotlinInject.compiler)
 }
+
+/*
+
+
+tasks.named<Test>("androidUnitTest") {
+    useJUnitPlatform()
+    filter {
+        isFailOnNoMatchingTests = false
+    }
+    testLogging {
+        showExceptions = true
+        showStandardStreams = true
+        events = setOf(
+            org.gradle.api.tasks.testing.logging.TestLogEvent.FAILED,
+            org.gradle.api.tasks.testing.logging.TestLogEvent.PASSED
+        )
+        exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+    }
+}*/
